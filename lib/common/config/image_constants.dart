@@ -4,4 +4,5 @@ class ImageConstant {
   static const String news = 'assets/icons/news.png';
   static const String videocall = 'assets/icons/videocall.png';
   static const String aboutme = 'assets/icons/aboutme.png';
+  static const String launch = 'assets/icons/ic_launch.png';
 }
