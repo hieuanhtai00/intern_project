@@ -40,16 +40,32 @@ class HomeScreen extends StatelessWidget {
           ),
           Expanded(
             child: ListTile(
-              title: Text(covid.locations.locationlist[index].name),
+              title: Text(
+                covid.locations.locationlist[index].name,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                ),
+              ),
               subtitle: Text(
                 'Số ca nhiễm: ' +
-                    covid.locations.locationlist[index].death.toString(),
+                    covid.locations.locationlist[index].cases.toString(),
               ),
-              trailing: Text('Tử vong: ' +
-                  covid.locations.locationlist[index].death.toString()),
             ),
-            flex: 4,
+            flex: 3,
           ),
+          Expanded(
+            child: Container(
+              child: Text(
+                'Tử vong\n' +
+                    covid.locations.locationlist[index].death.toString(),
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            flex: 1,
+          )
         ],
       ),
       autofocus: true,
