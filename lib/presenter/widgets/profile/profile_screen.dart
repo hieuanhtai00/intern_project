@@ -12,18 +12,21 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Expanded(
-            child: InformationScreen(),
-            flex: 2,
-          ),
-          Expanded(
-            child: Menus(),
-            flex: 7,
-          ),
-        ],
+    return BlocProvider<ProfileCubit>(
+      create: (context) => ProfileCubit(),
+      child: Container(
+        child: Column(
+          children: [
+            Expanded(
+              child: InformationScreen(),
+              flex: 2,
+            ),
+            Expanded(
+              child: Menus(),
+              flex: 7,
+            ),
+          ],
+        ),
       ),
     );
   }

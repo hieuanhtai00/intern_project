@@ -21,6 +21,11 @@ class CardInformation extends StatelessWidget {
               style: TextStyle(fontSize: 24),
             ),
             subtitle: Text(state.phone),
+            selectedColor: Colors.grey,
+            trailing: Icon(
+              Icons.logout,
+              color: Colors.black,
+            ),
           ),
         );
       },

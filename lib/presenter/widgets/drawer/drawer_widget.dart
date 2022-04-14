@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:project_intern/common/data_test/user_infor_test.dart';
+import 'package:project_intern/presenter/widgets/drawer/icon_animation.dart';
 
 class DrawerWidget extends StatelessWidget {
   DrawerWidget({Key? key}) : super(key: key);
@@ -76,9 +78,9 @@ class DrawerWidget extends StatelessWidget {
             padding: const EdgeInsets.only(top: 8.0),
             child: Row(
               children: [
-                Expanded(child: Icon(Icons.home)),
-                Expanded(child: Icon(Icons.favorite)),
-                Expanded(child: Icon(Icons.rate_review))
+                Expanded(child: HomeIcon()),
+                Expanded(child: HeartIcon()),
+                Expanded(child: AboutIcon())
               ],
             ),
           ),

@@ -12,20 +12,17 @@ class InformationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: BlocProvider<ProfileCubit>(
-        create: (context) => ProfileCubit(),
-        child: Row(
-          children: [
-            Expanded(
-              child: Avatar(),
-              flex: 1,
-            ),
-            Expanded(
-              child: CardInformation(),
-              flex: 2,
-            )
-          ],
-        ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Avatar(),
+            flex: 1,
+          ),
+          Expanded(
+            child: CardInformation(),
+            flex: 2,
+          )
+        ],
       ),
     );
   }
